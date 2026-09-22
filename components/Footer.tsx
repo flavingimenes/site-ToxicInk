@@ -19,17 +19,17 @@ export default function Footer() {
           <span className="mx-3 text-white/40">|</span>
           <a
             href={site.whatsapp}
-            className="underline decoration-dotted underline-offset-4 transition-colors hover:text-[var(--neon)]"
+            className="underline decoration-dotted underline-offset-4 transition-colors hover:text-(--neon)"
           >
             {site.phone}
           </a>
         </p>
 
         <div className="flex items-center gap-4">
-          <a href={site.instagram} aria-label="Instagram" className="transition-colors hover:text-[var(--neon)]">
+          <a href={site.instagram} aria-label="Instagram" className="transition-colors hover:text-(--neon)">
             <FaInstagram className="h-8 w-8" />
           </a>
-          <a href={site.whatsapp} aria-label="WhatsApp" className="transition-colors hover:text-[var(--neon)]">
+          <a href={site.whatsapp} aria-label="WhatsApp" className="transition-colors hover:text-(--neon)">
             <FaWhatsapp className="h-8 w-8" />
           </a>
         </div>

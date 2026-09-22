@@ -9,7 +9,7 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="grain grain-dark sticky top-0 z-50 border-b border-white/15 bg-[#0d0d0d]/95 backdrop-blur">
+    <header className="grain grain-dark fixed! left-0 right-0 top-0 z-50 border-b border-white/15 bg-[#0d0d0d]/95 backdrop-blur">
       <div className="mx-auto flex h-18 max-w-6xl items-center justify-between px-5">
         <a href="#inicio" className="flex items-center gap-3">
           <div className="h-10 w-10 shrink-0"></div>

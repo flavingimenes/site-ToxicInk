@@ -6,6 +6,7 @@ import works from "@/lib/works";
 import { TbArrowBigLeftFilled, TbArrowBigRightFilled } from "react-icons/tb";
 
 import paperBg from "@/images/textures/paperBg.jpg";
+import Link from "next/link";
 
 export default function Works() {
   const track = useRef<HTMLDivElement>(null);
@@ -32,7 +33,7 @@ export default function Works() {
       className="relative bg-cover bg-center pb-32 pt-14 md:pb-40 md:pt-20"
     >
       <div className="mx-auto max-w-6xl px-5 text-black md:px-0">
-        <p className="text-xs uppercase tracking-[0.12em]">Trabalhos</p>
+        <p className="text-xs uppercase tracking-[0.12em]">alguns dos</p>
 
         <div className="mt-1 flex items-end justify-between">
           <h2 className="font-display inline-block text-4xl uppercase leading-none sm:text-5xl md:text-6xl">
@@ -40,12 +41,12 @@ export default function Works() {
             <span className="hand-underline mt-2" />
           </h2>
 
-          <a
-            href="#"
+          <Link
+            href="/trabalhos"
             className="mb-2 flex items-center gap-2 border-b border-black pb-0.5 text-xs uppercase tracking-wider transition-opacity hover:opacity-60"
           >
             Ver todos <ArrowRight size={13} />
-          </a>
+          </Link>
         </div>
 
         <div className="relative mt-6">

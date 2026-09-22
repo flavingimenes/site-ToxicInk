@@ -13,3 +13,8 @@ export const navLinks = [
   { label: "Agendamento", href: "#agendamento" },
   { label: "Contato", href: "#contato" },
 ];
+
+export const worksNavLinks = [
+  { label: "Início", href: "#inicio" },
+  { label: "Contato", href: "#contato" },
+];

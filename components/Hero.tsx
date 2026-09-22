@@ -3,7 +3,7 @@ import { site } from "@/lib/site";
 
 export default function Hero() {
   return (
-    <section id="inicio" className="grain grain-dark border-b border-white/15">
+    <section id="inicio" className="grain grain-dark border-b pt-18 border-white/15">
       <div className="mx-auto grid max-w-6xl md:grid-cols-2">
         <div className="order-2 flex flex-col justify-center px-5 py-14 md:order-1 md:py-24 md:pl-16 md:pr-6">
           <h1 className="font-display -rotate-3 text-[4.5rem] uppercase leading-[0.85] sm:text-[6rem] md:text-[6.5rem]">
