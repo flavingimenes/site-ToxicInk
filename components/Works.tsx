@@ -3,10 +3,9 @@
 import { useRef } from "react";
 import { ArrowRight } from "lucide-react";
 import works from "@/lib/works";
-import {
-  TbArrowBigLeftFilled,
-  TbArrowBigRightFilled,
-} from "react-icons/tb";
+import { TbArrowBigLeftFilled, TbArrowBigRightFilled } from "react-icons/tb";
+
+import paperBg from "@/images/textures/paperBg.jpg";
 
 export default function Works() {
   const track = useRef<HTMLDivElement>(null);
@@ -29,9 +28,10 @@ export default function Works() {
   return (
     <section
       id="trabalhos"
-      className="paper grain torn-bottom relative pb-24 pt-10"
+      style={{ backgroundImage: `url(${paperBg.src})` }}
+      className="relative bg-cover bg-center pb-32 pt-14 md:pb-40 md:pt-20"
     >
-      <div className="mx-auto max-w-6xl px-5 md:px-0">
+      <div className="mx-auto max-w-6xl px-5 text-black md:px-0">
         <p className="text-xs uppercase tracking-[0.12em]">Trabalhos</p>
 
         <div className="mt-1 flex items-end justify-between">

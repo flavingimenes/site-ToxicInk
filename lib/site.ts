@@ -3,7 +3,7 @@ export const site = {
   location: "Várzea Grande - MT",
   phone: "(65) 99213-6578",
   whatsapp: "https://wa.me/5565992136578",
-  instagram: "https://instagram.com/",
+  instagram: "https://www.instagram.com/toxicc.ink/",
 };
 
 export const navLinks = [

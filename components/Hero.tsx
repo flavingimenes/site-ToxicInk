@@ -16,7 +16,7 @@ export default function Hero() {
             Tattoo Studio&nbsp;&nbsp;-&nbsp;&nbsp;{site.location}
           </p>
 
-          <p className="mt-7 max-w-[300px] text-[13px] leading-relaxed text-white/80">
+          <p className="mt-7 max-w-75 text-[13px] leading-relaxed text-white/80">
             Tatuagens autorais, com traços únicos e muito significado. Aqui, cada
             ideia ganha forma na pele.
           </p>
@@ -31,8 +31,8 @@ export default function Hero() {
         </div>
 
         <div className="order-1 md:order-2 md:py-0 md:pr-10">
-          <div className="mx-auto aspect-[4/5] w-full max-w-md md:max-w-none">
-            
+          <div className="mx-auto aspect-4/5 w-full max-w-md md:max-w-none">
+            {/* foto */}
           </div>
         </div>
       </div>

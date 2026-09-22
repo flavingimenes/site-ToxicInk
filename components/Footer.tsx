@@ -1,5 +1,6 @@
 import { site } from "@/lib/site";
-import { InstagramIcon, WhatsAppIcon } from "./Icons";
+import { FaInstagram, FaWhatsapp } from "react-icons/fa";
+
 
 
 export default function Footer() {
@@ -26,10 +27,10 @@ export default function Footer() {
 
         <div className="flex items-center gap-4">
           <a href={site.instagram} aria-label="Instagram" className="transition-colors hover:text-[var(--neon)]">
-            <InstagramIcon />
+            <FaInstagram className="h-8 w-8" />
           </a>
           <a href={site.whatsapp} aria-label="WhatsApp" className="transition-colors hover:text-[var(--neon)]">
-            <WhatsAppIcon />
+            <FaWhatsapp className="h-8 w-8" />
           </a>
         </div>
       </div>
