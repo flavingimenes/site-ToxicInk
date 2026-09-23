@@ -1,6 +1,9 @@
 import { ArrowRight } from "lucide-react";
 import { site } from "@/lib/site";
 import { FaWhatsapp } from "react-icons/fa";
+import Image from "next/image";
+
+import footerImg from "@/images/textures/footer-img.png";
 
 export default function CTA() {
   return (
@@ -36,17 +39,13 @@ export default function CTA() {
           </a>
         </div>
 
-        <div className="flex justify-center md:justify-end">
-          <div className="paper grain w-full max-w-[220px] rotate-[8deg] px-6 py-7 shadow-[3px_4px_0_rgba(0,0,0,0.5)] [clip-path:polygon(2%_4%,97%_0,100%_95%,4%_100%)] sm:max-w-[240px] sm:px-7 sm:py-8">
-            <p className="font-hand -rotate-6 text-center text-xl uppercase leading-tight sm:text-2xl">
-              Arte
-              <br />
-              na pele
-              <br />
-              pra sempre.
-            </p>
-          </div>
-        </div>
+        <Image
+  src={footerImg}
+  alt="Imagem de exemplo"
+  width={450}
+  height={450}
+  className=" max-w-80  rotate-[-8deg] object-cover shadow-[3px_4px_0_rgba(0,0,0,0.5)] [clip-path:polygon(2%_4%,97%_0,100%_95%,4%_100%)] sm:max-w-65 mb-14"
+/>
       </div>
     </section>
   );
