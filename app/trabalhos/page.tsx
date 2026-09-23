@@ -37,20 +37,25 @@ export default function TrabalhosPage() {
               Portfólio
             </p>
 
-            <h1 className="font-display mt-1 inline-block text-5xl uppercase leading-none md:text-7xl">
-              Minha <span className="text-[#ff26a8]">G</span>
-              <span className="text-[#ff2eae]">A</span>
-              <span className="text-[#ff36b4]">L</span>
-              <span className="text-[#ff3eba]">E</span>
-              <span className="text-[#ff46c0]">R</span>
-              <span className="text-[#ff4ec6]">I</span>
-              <span className="text-[#ff56cc]">A</span>
-              <span
-  className="hand-underline mt-2"
-  style={{
-    background: "linear-gradient(to right, white, white, #ff2eae, #ff2eae)",
-  }}
-/>
+            <h1 className="font-display relative mt-1 inline-block text-5xl uppercase leading-none md:text-7xl">
+              Minha{" "}
+              <span className="block md:inline">
+                <span className="text-[#ff26a8]">G</span>
+                <span className="text-[#ff2eae]">A</span>
+                <span className="text-[#ff36b4]">L</span>
+                <span className="text-[#ff3eba]">E</span>
+                <span className="text-[#ff46c0]">R</span>
+                <span className="text-[#ff4ec6]">I</span>
+                <span className="text-[#ff56cc]">A</span>
+
+                <span
+                  className="hand-underline mt-2 w-full md:hidden"
+                  style={{
+                    background:
+                      "linear-gradient(to right, white, white, #ff2eae, #ff2eae)",
+                  }}
+                />
+              </span>
             </h1>
           </div>
         </section>
