@@ -31,7 +31,6 @@ footer[id] {
   font-family: var(--font-hand), cursive;
 }
 
-/* grão e papel, só CSS/SVG inline */
 .grain {
   position: relative;
   isolation: isolate;
