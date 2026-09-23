@@ -1,20 +1,24 @@
+
 "use client";
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import { FiX } from "react-icons/fi";
 import type { Work } from "@/lib/works-data";
+import { IoClose } from "react-icons/io5";
 
 export default function WorksGallery({ works }: { works: Work[] }) {
   const [active, setActive] = useState<Work | null>(null);
 
   useEffect(() => {
     if (!active) return;
+
     const onKeyDown = (e: KeyboardEvent) => {
       if (e.key === "Escape") setActive(null);
     };
+
     document.addEventListener("keydown", onKeyDown);
     document.body.style.overflow = "hidden";
+
     return () => {
       document.removeEventListener("keydown", onKeyDown);
       document.body.style.overflow = "";
@@ -30,7 +34,7 @@ export default function WorksGallery({ works }: { works: Work[] }) {
             type="button"
             onClick={() => setActive(w)}
             aria-label={`Ampliar trabalho ${w.id}`}
-            className="group relative cursor-pointer aspect-4/5 overflow-hidden border-2 border-white/10 bg-black text-left transition-all duration-500 hover:border-[#ff22b5] hover:shadow-[0_0_20px_rgba(255,34,181,0.55),0_0_42px_rgba(255,34,181,0.25)]"
+            className="group relative aspect-4/5 cursor-pointer overflow-hidden border-2 border-white/10 bg-black text-left transition-all duration-500 hover:border-[#ff22b5] hover:shadow-[0_0_20px_rgba(255,34,181,0.55),0_0_42px_rgba(255,34,181,0.25)]"
           >
             <Image
               src={w.image}
@@ -60,26 +64,26 @@ export default function WorksGallery({ works }: { works: Work[] }) {
           role="dialog"
           aria-modal="true"
           onClick={() => setActive(null)}
-          className="fixed inset-0 z-100 flex items-center justify-center bg-black/90 p-4 backdrop-blur-sm md:p-10"
+          className="fixed inset-0 z-100 flex items-center justify-center bg-black/60 p-4 backdrop-blur-sm md:p-10"
         >
-          <button
-            type="button"
-            onClick={() => setActive(null)}
-            aria-label="Fechar"
-            className="absolute right-4 top-4 flex h-10 w-10 items-center justify-center border border-white/20 text-white transition-colors hover:border-[#ff26b8] hover:text-[#ff26b8] md:right-8 md:top-8"
-          >
-            <FiX size={20} />
-          </button>
-
           <div
             onClick={(e) => e.stopPropagation()}
-            className="relative aspect-4/5 w-full max-w-lg border-2 border-[#ff26b8] shadow-[0_0_25px_rgba(255,38,184,0.7),0_0_55px_rgba(255,38,184,0.35)] md:max-w-xl"
+            className="relative aspect-4/4 w-[80vw] max-w-112.5 border-2 border-[#ff26b8] shadow-[0_0_25px_rgba(255,38,184,0.7),0_0_55px_rgba(255,38,184,0.35)] md:max-w-xl"
           >
+            <button
+              type="button"
+              onClick={() => setActive(null)}
+              aria-label="Fechar imagem"
+              className="absolute -right-2 -top-3 z-10 flex h-11 w-11 items-center cursor-pointer justify-center border-2 border-[#ff26b8] bg-black text-[#ff26b8] shadow-[0_0_12px_rgba(255,38,184,0.8)] transition-all duration-300 hover:bg-[#ff26b8] hover:text-black"
+            >
+              <IoClose size={24} />
+            </button>
+
             <Image
               src={active.image}
               alt={`Trabalho ${active.id} - Toxic Ink`}
               fill
-              sizes="(max-width: 768px) 90vw, 600px"
+              sizes="(max-width: 768px) 80vw, 450px"
               className="bg-black object-contain"
             />
           </div>
@@ -88,3 +92,4 @@ export default function WorksGallery({ works }: { works: Work[] }) {
     </>
   );
 }
+
